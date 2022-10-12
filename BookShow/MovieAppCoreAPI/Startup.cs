@@ -39,10 +39,9 @@ namespace MovieAppCoreAPI
             services.AddTransient<TheatreService, TheatreService>();
             services.AddTransient<ITheatreOpearationRepository, TheatreOpearationRepository>();
 
-            
-            services.AddTransient<IShowTimingOperationRepository,ShowTimingOperationRepository>();
             services.AddTransient<ShowTimingService, ShowTimingService>();
-
+            services.AddTransient<IShowTimingOperationRepository,ShowTimingOperationRepository>();
+            
 
             services.AddControllers();
             services.AddSwaggerGen();

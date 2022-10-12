@@ -10,6 +10,10 @@ namespace BookShowDAL.Repost
     public class ShowTimingOperationRepository : IShowTimingOperationRepository
     {
         BookShowDbContext _dbContext;
+        public ShowTimingOperationRepository(BookShowDbContext dbContext)
+        {
+            _dbContext = dbContext;
+        }
 
         public void AddShow(ShowTiming showTiming)
         {
